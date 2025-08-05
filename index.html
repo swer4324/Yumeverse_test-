@@ -483,13 +483,13 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 5 px;
+            margin-top: 10px;
         }
 
         .social-links a {
             color: var(--text-gray);
-            font-size: 1.8rem;
+            font-size: 20 px;
             transition: all 0.3s ease;
             text-decoration: none;
             padding: 10px;
@@ -592,11 +592,11 @@
             }
 
             .social-links {
-                gap: 1rem;
+                gap: 5px;
             }
 
             .social-links a {
-                font-size: 1.5rem;
+                font-size: 10px;
             }
         }
 
@@ -967,6 +967,7 @@
 			});
 		}
 		
+
         // Mobile menu toggle
         function initMobileMenu() {
             const mobileToggle = document.getElementById('mobile-toggle');
@@ -1079,35 +1080,9 @@
             });
         }
 
-        // Responsive behavior
-        /*function initResponsiveBehavior() {
-            function handleResize() {
-                const isMobile = window.innerWidth <= 768;
-                
-                if (isMobile) {
-                    // Mobile: Show all tab contents for scrolling
-                    document.querySelectorAll('.tab-content').forEach(content => {
-                        content.style.display = 'block';
-                    });
-                } else {
-                    // Desktop: Hide all except active tab
-                    document.querySelectorAll('.tab-content').forEach(content => {
-                        if (!content.classList.contains('active')) {
-                            content.style.display = 'none';
-                        } else {
-                            content.style.display = 'block';
-                        }
-                    });
-                }
-            }
-
-            // Run on load and resize
-            handleResize();
-            window.addEventListener('resize', handleResize);
-        }*/
 		function initResponsiveBehavior() {
 			function handleResize() {
-				const isMobile = window.innerWidth <= 768;
+				const isMobile = matchMedia('(max-width: 768px)').matches;
 				
 				if (isMobile) {
 					// Mobile → mostro tutte le sezioni
